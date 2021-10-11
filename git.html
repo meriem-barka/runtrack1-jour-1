@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <link rel="stylesheet" type="text/css" href="css/git.css"/>
+    <title></title>
+  </head>
+
+  <body>
+    <h1></h1>
+    <!-- Ici, on écrira le contenu du tableau -->
+    <table>
+      <caption>Commandes Git</caption>
+
+      <tr>
+        <th>Commande</th>
+        <th>Description</th>
+        <th></th>
+      </tr>
+
+      <tr>
+        <td>Initialiser un dépôt Git</td>
+        <td>Pour initialiser un dépôt, il suffit de taper
+          la commande suivant dans votre terminal préféré :
+          git init.</td>
+      </tr>
+
+      <tr>
+        <td>Cloner un dépôt git</td>
+        <td>Le clonage d’un dépôt Git distant. le but est de cloner le dépôt distant en local sur sa machine.
+            Git clone.</td>
+      </tr>
+
+      <tr>
+        <td>Récupérer les mises à jour du dépôt distant</td>
+        <td>Cette commande permet de récupérer les mises à jour du dépôt distant,
+            c’est à dire les derniers commits poussés ainsi que les branches créées.
+            Votre dépôt local va se mettre à niveau par rapport au distant.
+            git fetch.</td>
+      </tr>
+
+      <tr>
+        <td>Changer de branche</td>
+        <td>Il suffit alors de mettre le nom de la branche derrière le mot checkout pour basculer sur la branche en question.
+            Si la branche existe sur le dépôt distant ou en local, vous basculerez automatiquement dessus.
+            git checkout.</td>
+      </tr>
+
+      <tr>
+        <td>Tracker vos fichiers et vos dossiers</td>
+        <td>Cette commande permet de dire à git que l’on veut tracker notre fichier pour l’inclure dans le versionning.
+            Il suffit de mettre le nom du fichier derrière le mot-clé add que l’on veut tracker.
+            git add
+            Si on veut tout tracker. Il suffit alors de rajouter un simple point pour tracker tous les fichiers :
+            git add.</td>
+      </tr>
+
+      <tr>
+        <td>Versionner ses changements</td>
+        <td>Un commit permet de figer à un instant T une version d’un ou plusieurs fichiers.
+            git commit.
+
+            Utilisez la commande tel quel ne fonctionnera pas.
+            Il faut avoir au préalable effectué un git add et ajouter
+            l’option -m à votre commande git commit pour décrire les changements que vous avez :
+            git commit -m .
+          </td>
+      </tr>
+
+      <tr>
+        <td>Modifier le message de son dernier commit</td>
+        <td>Vous avez réalisé un commit mais vous vous êtes loupé sur le message ? Pas de souci ça m’arrive très souvent.
+          Il suffit d’utiliser cette commande :
+          git commit --amend -m "Mon nouveau message".</td>
+      </tr>
+
+      <tr>
+        <td>Garder une trace de son travail sans vouloir faire de commit</td>
+        <td>Cette commande va créer un genre de commit qui sera stocké en local sans rapport avec une branche précise.
+          Une fois fait, il va restaurer la branche sur laquelle vous aviez fait les modifications (que vous avez en stash)
+          comme elle l’était avant vos changements.
+          git stash.
+
+          Si jamais vous voulez réappliquer votre stash à un moment donné, il vous suffit d’utiliser la commande :
+          git stash apply.
+        </td>
+      </tr>
+
+      <tr>
+        <td>Pousser vos changements sur le dépôt distant</td>
+        <td>effectuer des commits va créer une version d’un ou plusieurs fichiers à un instant T
+            mais localement sur votre machine. Pour en faire bénéficier tout le monde,
+            il faut le mettre à disposition sur le dépôt distant.
+            git push
+
+            En fait cette commande va pousser les commits mais également la branche où se trouvent les commits
+            (si la branche n’existe pas sur le dépôt distant, elle sera créée).
+            git push origin master.
+          </td>
+      </tr>
+
+      <tr>
+        <td>Fusionner une branche sur sa branche</td>
+        <td> En travaillant à plusieurs, il peut arriver où l’on veut récupérer le travail d’un autre collègue.
+          Bien entendu vous travaillez chacun sur des branches différentes,
+          mais vous avez besoin de ce qu’il a sur la sienne.
+          C’est la que cette commande intervient et va vous aider :
+          git merge
+
+          Cette commande va vous permettre de récupérer les commits de la branche en question sur la votre.
+          git merge origin fix_bug.</td>
+      </tr>
+
+      <tr>
+        <td>Récupérer les mises à jour d’une branche dont on hérite</td>
+        <td>C’est une commande à utiliser pour récupérer des commits effectués après votre création de branches
+            et dans le cas où vous utilisez une méthode structurée d’utilisation de Git comme Git Flow.
+            git rebase.</td>
+      </tr>
+
+      <tr>
+        <td>Mettre à jour une branche local par rapport à une branche distante</td>
+        <td>Une commande bien utile pour récupérer les mises à jour d’une branche distante
+          sur une branche déjà existante en local :
+          git pull.</td>
+      </tr>
+
+      <tr>
+        <td>Créer un tag pour identifier un commit d’une branche</td>
+        <td>Quand on met une nouvelle version en production,
+          on aimerait pouvoir figer cette version dans notre dépôt
+          pour pouvoir les tracer voir revenir en arrière s’il y a un problème.
+          git tag.
+
+          Il suffit alors de renseigner ce que vous voulez derrière pour créer votre tag.
+          Si vous voulez créer le tag v1.0 sur votre branche master actuelle. Vous taperez cette commande :
+          git tag v1.0.</td>
+      </tr>
+
+      <tr>
+        <td>Voir l’historique des commits sur un dépôt local</td>
+        <td>Cette commande est vraiment très utile mais je l’utilise que dans un seul contexte.
+          Lorsque je suis sur un serveur en SSH. Je vérifie que le dépôt sur le serveur est à jour
+          et je contrôle les derniers commits récupérer pour vérification :
+          git log.</td>
+      </tr>
+
+    </table>
+
+  </body>
+</html>

@@ -1,0 +1,38 @@
+
+
+body{
+  background-color: #CD853F	;
+}
+
+
+caption {
+  margin: 5%;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+}
+
+
+table{
+  background-color:#FFDAB9;
+  margin: 0 auto;
+  border: 1px dashed;
+  border-collapse: collapse;
+}
+
+th{
+  color: Peru;
+  font-size: 20px;
+}
+
+td{
+  color: Chocolate;
+  width: 500px;
+}
+
+tr, td{
+  border: 1.5px dashed white;
+  padding: 10px;
+  vertical-align: top;
+}
